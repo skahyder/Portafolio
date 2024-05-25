@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido al proyecto</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <style>
+        .navbar {
+            background-color: #ffcccb; /* Rosa pastel */
+        }
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #000000 !important; /* Negro */
+        }
+        .nav-link {
+            font-size: 1.2rem;
+            transition: color 0.3s;
+            color: rgba(0, 0, 0, 0.75); /* Color inicial de los enlaces */
+        }
+        .nav-link:hover {
+            color: #b3e5fc; /* Celeste */
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">skahyder</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="btnScene1" class="nav-link" href="#">Raycast</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="btnScene2" class="nav-link" href="#">Modelo 3D</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="btnScene3" class="nav-link" href="#">Modo VR</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="btnScene4" class="nav-link" href="#">uml</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--Botón para abril el Modal-->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#welcomeModal"
+        style="display: none;">
+        launch demo modal
+    </button>
+
+    <div id="containerScene1"></div>
+    <div id="containerScene2" style="display: none;"></div>
+    <div id="containerScene3" style="display: none;"></div>
+    <div id="containerScene4" style="display: none;">
+         <img id="myImage" src="/uml.png" alt="diagrama uml" width="auto" height="700vh">
+    </div>
+
+    <!--THREE-->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r119/three.js"></script>
+    <script src="https://cdn.rawgit.com/mrdoob/three.js/r119/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://threejsfundamentals.org/threejs/resources/threejs/r119/examples/jsm/loaders/FBXLoader.js"></script>
+     -->
+
+    <script async src="https://unpkg.com/es-module-shims@1.8.0/dist/es-module-shims.js"></script>
+
+    <script type="importmap">
+         {
+             "imports": 
+             {
+                 "three": "https://unpkg.com/three@0.156.1/build/three.module.js",
+                 "three/addons/": "https://unpkg.com/three@0.156.1/examples/jsm/"
+             }
+         }
+     </script>
+
+    <script type="module" src="Js/scenebase.js"></script>
+    <script type="module" src="Js/sceneBox.js"></script>
+    <script type="module" src="Js/sceneBoxRed.js"></script>
+    <script type="module" src="Js/sceneVR.js"></script>
+    <script type="module" src="Js/BoxPhysic.js"></script>
+    <script type="module" src="Js/main.js"></script>
+
+
+   
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper/js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.js"></script>
+    <!-- <script>
+            $('#welcomeModal').modal('show');
+        </script> -->
+
+
+</body>
+
+</html>
