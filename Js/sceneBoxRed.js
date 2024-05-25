@@ -48,7 +48,7 @@ export class SceneBoxRed extends SceneBase {
         // model
         const loader = new FBXLoader();
         let base = new THREE.Group();
-        loader.load('../Two Handed Sword Death.fbx', (object) => {
+        loader.load('./../Two Handed Sword Death.fbx', (object) => {
 
             this.mixer = new THREE.AnimationMixer(object);
 
